@@ -1,0 +1,39 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Generated images
+gallery/*
+uploads/*
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+# Nested/old repository
+DecodeLabs_Project3-AI-Multimodal-Image-Generation-Studio/
+
+# Test/generated files
+generated_image.png
+generated_streamlit_image.png
+stage2_test.png
+test_image.jpg
