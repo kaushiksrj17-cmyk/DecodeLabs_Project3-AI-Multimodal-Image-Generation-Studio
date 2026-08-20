@@ -13,12 +13,20 @@ load_dotenv()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 
+# Streamlit Cloud fallback
+if not HF_TOKEN:
+    try:
+        import streamlit as st
+        HF_TOKEN = st.secrets.get("HF_TOKEN")
+    except Exception:
+        HF_TOKEN = None
+
 if not HF_TOKEN:
     raise ValueError(
-        "HF_TOKEN is missing.\n"
-        "Please add your Hugging Face token to the .env file."
+        "HF_TOKEN is missing. "
+        "Add HF_TOKEN to your .env file locally "
+        "or to Streamlit Cloud Secrets."
     )
-
 
 # ============================================================
 # HUGGING FACE CLIENT
