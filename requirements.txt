@@ -3,3 +3,4 @@ google-genai
 python-dotenv
 Pillow
 requests
+huggingface_hub
